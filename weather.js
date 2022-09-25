@@ -28,6 +28,7 @@ function displayData(cityName, tempK, status, sunrise, sunset) {
   document.getElementById("city").innerHTML = cityName;
   const tempC = tempK - 273;
   document.getElementById("temperature").innerHTML = Math.floor(tempC) + "°";
+  document.getElementById("input").style.borderColor = "black";
   document.getElementById("status").innerHTML = status;
   if (unixNow >= sunrise && unixNow <= sunset) {
     document.getElementById("middle").style.background = "rgb(230 230 230)";
