@@ -30,13 +30,15 @@ function displayData(cityName, tempK, status, sunrise, sunset) {
   document.getElementById("temperature").innerHTML = Math.floor(tempC) + "°";
   document.getElementById("input").style.borderColor = "black";
   document.getElementById("status").innerHTML = status;
+  let today = new Date().toISOString().slice(0, 10);
+  document.getElementById("date").innerHTML = today;
   if (unixNow >= sunrise && unixNow <= sunset) {
-    document.getElementById("middle").style.background = "rgb(230 230 230)";
-    document.getElementById("pic").src = status + ".png";
+    document.getElementById("middle").style.background = "rgb(237 237 237)";
+    document.getElementById("pic").src = "png/" + status + ".png";
     document.getElementById("city").style.color = "black";
   } else {
     document.getElementById("middle").style.background = "#111827";
-    document.getElementById("pic").src = status + "n.png";
+    document.getElementById("pic").src = "png/" + status + "n.png";
     document.getElementById("city").style.color = "white";
   }
 }
