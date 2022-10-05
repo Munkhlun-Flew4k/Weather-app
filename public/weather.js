@@ -23,22 +23,34 @@ async function getWeather(city) {
       );
     });
 }
-
 function displayData(cityName, tempK, status, sunrise, sunset) {
-  document.getElementById("city").innerHTML = cityName;
-  const tempC = tempK - 273;
-  document.getElementById("temperature").innerHTML = Math.floor(tempC) + "°";
-  document.getElementById("input").style.borderColor = "black";
-  document.getElementById("status").innerHTML = status;
-  let today = new Date().toISOString().slice(0, 10);
-  document.getElementById("date").innerHTML = today;
-  if (unixNow >= sunrise && unixNow <= sunset) {
+  if (cityName == "esugen" && "Esugen") {
+    document.getElementById("city").innerHTML = "I like Esugen";
+    const tempC = "❤️❤️❤️";
+    document.getElementById("temperature").innerHTML = "❤️❤️❤️";
+    document.getElementById("input").style.borderColor = "black";
+    document.getElementById("status").innerHTML = "❤️❤️❤️";
+    let today = new Date().toISOString().slice(0, 10);
+    document.getElementById("date").innerHTML = today;
     document.getElementById("middle").style.background = "rgb(237 237 237)";
-    document.getElementById("pic").src = "png/" + status + ".png";
+    document.getElementById("pic").src = "png/" + heart + ".png";
     document.getElementById("city").style.color = "black";
   } else {
-    document.getElementById("middle").style.background = "#111827";
-    document.getElementById("pic").src = "png/" + status + "n.png";
-    document.getElementById("city").style.color = "white";
+    document.getElementById("city").innerHTML = cityName;
+    const tempC = tempK - 273;
+    document.getElementById("temperature").innerHTML = Math.floor(tempC) + "°";
+    document.getElementById("input").style.borderColor = "black";
+    document.getElementById("status").innerHTML = status;
+    let today = new Date().toISOString().slice(0, 10);
+    document.getElementById("date").innerHTML = today;
+    if (unixNow >= sunrise && unixNow <= sunset) {
+      document.getElementById("middle").style.background = "rgb(237 237 237)";
+      document.getElementById("pic").src = "png/" + status + ".png";
+      document.getElementById("city").style.color = "black";
+    } else {
+      document.getElementById("middle").style.background = "#111827";
+      document.getElementById("pic").src = "png/" + status + "n.png";
+      document.getElementById("city").style.color = "white";
+    }
   }
 }
