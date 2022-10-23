@@ -13,11 +13,13 @@ input.addEventListener("keypress", (event) => {
       document.getElementById("temperature").innerHTML = "❤️"
     } else {
       if (document.getElementById("input").value == "flew") {
+        console.log("kekw")
         document.getElementById("city").innerHTML = "I am Flew4k";
         document.getElementById("temperature").innerHTML = "213";
         document.getElementById("input").style.borderColor = "black";
         document.getElementById("status").innerHTML = "Flew4k";
         document.getElementById("date").innerHTML = "4k means 4 times better than the normal Flew(Dulguun bagsh)";
+        document.getElementById("date").style.fontSize = "10px";
         document.getElementById("middle").style.background = "rgb(237 237 237)";
         document.getElementById("pic").src = "png/" + "heart" + ".png";
         document.getElementById("city").style.color = "black";
