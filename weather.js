@@ -21,7 +21,7 @@ input.addEventListener("keypress", (event) => {
         document.getElementById("date").innerHTML = "4k means 4 times better than the normal Flew(Dulguun bagsh)";
         document.getElementById("date").style.fontSize = "10px";
         document.getElementById("middle").style.background = "rgb(237 237 237)";
-        document.getElementById("pic").src = "png/" + "heart" + ".png";
+        document.getElementById("pic").src = "png/Rainn.png";
         document.getElementById("city").style.color = "black";
       } else {
         getWeather(input.value);
