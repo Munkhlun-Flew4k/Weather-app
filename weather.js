@@ -10,21 +10,33 @@ input.addEventListener("keypress", (event) => {
       document.getElementById("middle").style.background = "rgb(237 237 237)";
       document.getElementById("pic").src = "png/" + "heart" + ".png";
       document.getElementById("city").style.color = "black";
-      document.getElementById("temperature").innerHTML = "❤️"
+      document.getElementById("temperature").innerHTML = "❤️";
     } else {
       if (document.getElementById("input").value == "flew") {
-        console.log("kekw")
         document.getElementById("city").innerHTML = "I am Flew4k";
+        document.getElementById("city").style.color = "white";
         document.getElementById("temperature").innerHTML = "213";
         document.getElementById("input").style.borderColor = "black";
         document.getElementById("status").innerHTML = "Flew4k";
         document.getElementById("date").innerHTML = "4k means 4 times better than the normal Flew(Dulguun bagsh)";
+        document.getElementById("date").style.lineHeight = 2;
         document.getElementById("date").style.fontSize = "10px";
-        document.getElementById("middle").style.background = "rgb(237 237 237)";
-        document.getElementById("pic").src = "png/Rainn.png";
-        document.getElementById("city").style.color = "black";
+        document.getElementById("middle").style.background = "#111827";
+        document.getElementById("pic").src = "png/Clearn.png";
       } else {
-        getWeather(input.value);
+        if (document.getElementById("input").value == "bilguun") {
+          document.getElementById("city").innerHTML = "I am Bilguun";
+          document.getElementById("temperature").innerHTML = "69";
+          document.getElementById("input").style.borderColor = "black";
+          document.getElementById("status").innerHTML = "Bilguun";
+          document.getElementById("date").innerHTML = "I bought Twitter for Elon Musk";
+          document.getElementById("date").style.fontSize = "10px";
+          document.getElementById("middle").style.background = "rgb(237 237 237)";
+          document.getElementById("pic").src = "png/Clear.png";
+          document.getElementById("city").style.color = "black";
+        } else {
+          getWeather(input.value);
+        }
       }
     }
   }
