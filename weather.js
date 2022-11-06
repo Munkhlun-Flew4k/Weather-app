@@ -37,10 +37,11 @@ input.addEventListener("keypress", (event) => {
         } else {
           if (document.getElementById("input").value == "zorig") {
             document.getElementById("city").innerHTML = "I am Zorig";
-            document.getElementById("temperature").innerHTML = "ZRG";
+            document.getElementById("temperature").innerHTML = "ZRG the KING";
+            document.getElementById("temperature").style.fontSize = "20px";
             document.getElementById("input").style.borderColor = "black";
             document.getElementById("status").innerHTML = "Zorig foundation";
-            document.getElementById("date").innerHTML = "I am bilguuns little brother that live in his laagar(Mars)";
+            document.getElementById("date").innerHTML = "I am Bilguuns little brother that live in his laagar(Mars)";
             document.getElementById("date").style.fontSize = "10px";
             document.getElementById("middle").style.background = "rgb(237 237 237)";
             document.getElementById("pic").src = "png/Snow.png";
