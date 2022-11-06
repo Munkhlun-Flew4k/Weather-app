@@ -80,6 +80,8 @@ function displayData(cityName, tempK, status, sunrise, sunset) {
   document.getElementById("status").innerHTML = status;
   let today = new Date().toISOString().slice(0, 10);
   document.getElementById("date").innerHTML = today;
+  document.getElementById("temperature").style.fontSize = "140px";
+  document.getElementById("date").style.fontSize = "18px";
   if (unixNow >= sunrise && unixNow <= sunset) {
     document.getElementById("middle").style.background = "rgb(237 237 237)";
     document.getElementById("pic").src = "png/" + status + ".png";
