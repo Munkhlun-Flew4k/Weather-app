@@ -35,7 +35,19 @@ input.addEventListener("keypress", (event) => {
           document.getElementById("pic").src = "png/Clear.png";
           document.getElementById("city").style.color = "black";
         } else {
-          getWeather(input.value);
+          if (document.getElementById("input").value == "zorig") {
+            document.getElementById("city").innerHTML = "I am Zorig";
+            document.getElementById("temperature").innerHTML = "ZRG";
+            document.getElementById("input").style.borderColor = "black";
+            document.getElementById("status").innerHTML = "Zorig foundation";
+            document.getElementById("date").innerHTML = "I am bilguuns little brother that live in his laagar(Mars)";
+            document.getElementById("date").style.fontSize = "10px";
+            document.getElementById("middle").style.background = "rgb(237 237 237)";
+            document.getElementById("pic").src = "png/Snow.png";
+            document.getElementById("city").style.color = "black";
+          } else {
+            getWeather(input.value);
+          }
         }
       }
     }
